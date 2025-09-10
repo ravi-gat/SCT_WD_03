@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Tic-Tac-Toe</h1>
+
+  <div id="gameControls">
+    <label for="gameMode">Game Mode: </label>
+    <select id="gameMode">
+      <option value="2p">2 Players</option>
+      <option value="computer">Play vs Computer</option>
+    </select>
+
+    <label for="difficulty">Difficulty: </label>
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="hard">Hard</option>
+    </select>
+
+    <label for="matchMode">Match Mode: </label>
+    <select id="matchMode">
+      <option value="1">Single Game</option>
+      <option value="3">Best of 3</option>
+      <option value="5">Best of 5</option>
+    </select>
+  </div>
+
+  <div class="board" id="board"></div>
+  <div id="status"></div>
+  <div id="matchScore"></div>
+
+  <div id="scoreboard">
+    <h2>Scoreboard</h2>
+    <p>Player X: <span id="xScore">0</span></p>
+    <p>Player O: <span id="oScore">0</span></p>
+    <p>Draws: <span id="drawScore">0</span></p>
+    <button id="resetScores">Reset Scores</button>
+  </div>
+
+  <button onclick="resetGame()">Restart Round</button>
+  <button id="newMatch">Start New Match</button>
+
+  <!-- Sound Effects -->
+  <audio id="moveSound" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfae6b2.mp3"></audio>
+  <audio id="winSound" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfae6b2.mp3"></audio>
+  <audio id="drawSound" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfae6b2.mp3"></audio>
+  <audio id="errorSound" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfae6b2.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
